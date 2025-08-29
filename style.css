@@ -1,0 +1,415 @@
+/* Terminal Interface Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+    background-color: #1e1e1e;
+    color: #00ff00;
+    line-height: 1.4;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* Terminal Window */
+.terminal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Terminal Header */
+.terminal-header {
+    background-color: #2d2d2d;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.terminal-button.close {
+    background-color: #ff5f56;
+}
+
+.terminal-button.minimize {
+    background-color: #ffbd2e;
+}
+
+.terminal-button.maximize {
+    background-color: #27ca3f;
+}
+
+.terminal-title {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Terminal Content */
+.terminal-content {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+}
+
+/* Terminal Lines */
+.terminal-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    min-height: 20px;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.command,
+.command-input {
+    color: #fff;
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.cursor {
+    color: #00ff00;
+    margin-left: 2px;
+}
+
+.cursor.active {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Output Styling */
+.output {
+    margin-bottom: 16px;
+    color: #ccc;
+}
+
+/* Welcome Message */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    margin-bottom: 10px;
+}
+
+.profile-section h1 {
+    color: #00ff00;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+}
+
+.profile-section p {
+    color: #ccc;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
+/* Command Output Styling */
+.command-output {
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
+/* Directory Listing */
+.directory-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.directory-item {
+    padding: 4px 8px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.directory-item:hover {
+    background-color: #333;
+    border-color: #00ff00;
+}
+
+.directory-item.directory {
+    color: #00ff00;
+}
+
+.directory-item.file {
+    color: #fff;
+}
+
+.directory-item.image {
+    color: #ff6b6b;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    color: #00ff00;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-transform: lowercase;
+    border-bottom: 1px solid #333;
+    padding-bottom: 4px;
+}
+
+/* Project Items */
+.project-item {
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-header h3 {
+    color: #00ff00;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
+.project-links {
+    display: flex;
+    gap: 8px;
+}
+
+.project-link {
+    padding: 2px 8px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #555;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    transition: all 0.2s ease;
+}
+
+.project-link:hover {
+    background-color: #00ff00;
+    color: #000;
+    border-color: #00ff00;
+}
+
+.description {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.experience-header {
+    margin-bottom: 8px;
+}
+
+.experience-header h3 {
+    color: #00ff00;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    text-transform: lowercase;
+}
+
+.company {
+    color: #fff;
+    font-weight: bold;
+    margin-right: 8px;
+    text-transform: lowercase;
+}
+
+.duration {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Hobby Items */
+.hobby-item {
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.hobby-item h3 {
+    color: #00ff00;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    text-transform: lowercase;
+}
+
+.hobby-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Help Command Output */
+.help-output {
+    margin: 8px 0;
+}
+
+.help-command {
+    color: #00ff00;
+    font-weight: bold;
+    margin-right: 16px;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.help-description {
+    color: #ccc;
+}
+
+/* Error Messages */
+.error-message {
+    color: #ff6b6b;
+    margin: 8px 0;
+}
+
+/* Success Messages */
+.success-message {
+    color: #00ff00;
+    margin: 8px 0;
+}
+
+/* Clear Command */
+.clear-command {
+    color: #888;
+    font-style: italic;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    padding: 4px 8px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: #00ff00;
+    color: #000;
+    border-color: #00ff00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terminal-content {
+        padding: 12px;
+    }
+    
+    .directory-listing {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .social-links {
+        flex-direction: column;
+    }
+}
+
+/* Scrollbar Styling */
+.terminal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 0;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Focus styles */
+.terminal-content:focus {
+    outline: none;
+}
+
+/* Hidden content */
+#projects-content,
+#experience-content,
+#hobbies-content {
+    display: none;
+}

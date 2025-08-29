@@ -1,1 +1,121 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krish@asknani:~$</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">krish@asknani:~$</div>
+        </div>
+        
+        <div class="terminal-content" id="terminal-content">
+            <!-- Welcome message -->
+            <div class="terminal-line">
+                <span class="prompt">krish@asknani:~$</span>
+                <span class="command">welcome</span>
+            </div>
+            <div class="output">
+                <div class="welcome-message">
+                    <div class="profile-section">
+                        <img src="images/headshot.jpg" alt="Krish Asknani" id="profile-pic">
+                        <h1>krish asknani</h1>
+                        <p>final year computer science student at Georgia Tech</p>
+                    </div>
+                    <p>type 'help' for available commands</p>
+                </div>
+            </div>
+            
+            <!-- Initial prompt -->
+            <div class="terminal-line">
+                <span class="prompt">krish@asknani:~$</span>
+                <span class="command-input" contenteditable="true" spellcheck="false"></span>
+                <span class="cursor active">█</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden content sections -->
+    <div id="projects-content" style="display: none;">
+        <h2>projects</h2>
+        <div class="project-item">
+            <div class="project-header">
+                <h3>project name</h3>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="project-link">live</a>
+                    <a href="#" target="_blank" class="project-link">code</a>
+                </div>
+            </div>
+            <p class="description">
+                a brief description of your project. what technologies you used, 
+                what problems you solved, and what you learned.
+            </p>
+        </div>
+        <div class="project-item">
+            <div class="project-header">
+                <h3>another project</h3>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="project-link">live</a>
+                    <a href="#" target="_blank" class="project-link">code</a>
+                </div>
+            </div>
+            <p class="description">
+                another project description. keep it concise but informative 
+                about your technical skills and problem-solving abilities.
+            </p>
+        </div>
+    </div>
+
+    <div id="experience-content" style="display: none;">
+        <h2>experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>software engineer</h3>
+                <span class="company">company name</span>
+                <span class="duration">2023 - present</span>
+            </div>
+            <p class="description">
+                led development of scalable web applications using modern technologies. 
+                collaborated with cross-functional teams to deliver high-quality software solutions.
+            </p>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>frontend developer</h3>
+                <span class="company">previous company</span>
+                <span class="duration">2022 - 2023</span>
+            </div>
+            <p class="description">
+                built responsive user interfaces and implemented modern design systems. 
+                optimized application performance and user experience.
+            </p>
+        </div>
+    </div>
+
+    <div id="hobbies-content" style="display: none;">
+        <h2>hobbies</h2>
+        <div class="hobby-item">
+            <h3>coding</h3>
+            <p>building side projects, learning new technologies, contributing to open source</p>
+        </div>
+        <div class="hobby-item">
+            <h3>reading</h3>
+            <p>tech blogs, sci-fi novels, and anything about emerging technologies</p>
+        </div>
+        <div class="hobby-item">
+            <h3>music</h3>
+            <p>playing guitar, discovering new artists, attending concerts</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
