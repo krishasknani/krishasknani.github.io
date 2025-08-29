@@ -24,7 +24,7 @@ class Terminal {
         this.directoryStructure = {
             '~': {
                 type: 'directory',
-                contents: ['projects', 'experience', 'hobbies', 'social', 'contact', 'headshot.jpg']
+                contents: ['projects', 'experience', 'hobbies']
             },
             '~/projects': {
                 type: 'directory',
@@ -252,14 +252,7 @@ class Terminal {
         
         const filename = args[0];
         
-        if (filename === 'headshot.jpg') {
-            this.printOutput(`
-                <div class="output">
-                    <img src="images/headshot.jpg" alt="Krish Asknani" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #00ff00;">
-                    <p>krish asknani - final year computer science student at Georgia Tech</p>
-                </div>
-            `);
-        } else if (filename === 'project1') {
+        if (filename === 'PathVoice') {
             this.printOutput(`
                 <div class="content-section">
                     <h2>project name</h2>
@@ -272,6 +265,82 @@ class Terminal {
                             </div>
                         </div>
                         <p class="description">a brief description of your project. what technologies you used, what problems you solved, and what you learned.</p>
+                    </div>
+                </div>
+            `);
+        } else if (filename === 'Sideline') {
+            this.printOutput(`
+                <div class="content-section">
+                    <h2>project name</h2>
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>project name</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">live</a>
+                                <a href="#" target="_blank" class="project-link">code</a>
+                            </div>
+                        </div>
+                        <p class="description">a brief description of your project. what technologies you used, what problems you solved, and what you learned.</p>
+                    </div>
+                </div>
+            `);
+        } else if (filename === 'Bump') {
+            this.printOutput(`
+                <div class="content-section">
+                    <h2>project name</h2>
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>project name</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">live</a>
+                                <a href="#" target="_blank" class="project-link">code</a>
+                            </div>
+                        </div>
+                        <p class="description">a brief description of your project. what technologies you used, what problems you solved, and what you learned.</p>
+                    </div>
+                </div>
+            `);
+        } else if (filename === 'Rentathon') {
+            this.printOutput(`
+                <div class="content-section">
+                    <h2>project name</h2>
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>project name</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">live</a>
+                                <a href="#" target="_blank" class="project-link">code</a>
+                            </div>
+                        </div>
+                        <p class="description">a brief description of your project. what technologies you used, what problems you solved, and what you learned.</p>
+                    </div>
+                </div>
+            `);
+        } else if (filename === 'SDE Intern @ AWS') {
+            this.printOutput(`
+                <div class="content-section">
+                    <h2>SDE Intern @ AWS</h2>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>SDE Intern</h3>
+                            <span class="company">Amazon Web Services</span>
+                            <span class="duration">Summer 2024</span>
+                        </div>
+                        <p class="description">Your AWS internship description...</p>
+                    </div>
+                </div>
+            `);
+        }  else if (filename === 'SWE Intern @ Travelers') {
+            this.printOutput(`
+                <div class="content-section">
+                    <h2>SWE Intern @ Travelers</h2>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>SDE Intern</h3>
+                            <span class="company">Travelers</span>
+                            <span class="duration">Summer 2023</span>
+                        </div>
+                        <p class="description">Your Travelers internship description...</p>
                     </div>
                 </div>
             `);
